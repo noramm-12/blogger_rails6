@@ -9,7 +9,7 @@
     </ul>
 <% end %>
 
-<%# <%= form_with scope: :article ,url:articles_path , local:true do |f| %> %>
+<%# POST article_path(article)=>update %>
 <%= form_with(model: @article ,local:true)  do |f| %>
 <p>
     <%= f.label :title %><br/>

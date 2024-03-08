@@ -33,12 +33,18 @@ class ArticlesController < ApplicationController
   end
 
   def update
-    @article=Article.find(params[:id])
+    @article = Article.find(params[:id])
     if @article.update(params.require(:article).permit(:title, :description))
       flash[:notice] = 'Article was edited successfully.' # sending success message by flash
-      redirect_to article_path(@article)
+      redirect_to article_path(@article) # show
     else
       render 'edit'
     end
+  end
+
+  def destroy
+    @article = Article.find(params[:id])
+    @article.destroy
+    redirect_to articles_path # prefix:articles => index.html.erb
   end
 end
