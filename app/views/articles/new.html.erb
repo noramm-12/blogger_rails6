@@ -1,4 +1,4 @@
-<h1>create a new article</h1>
+<h1>Create a new article</h1>
 
 <% if @article.errors.any? %>
     <h2>the following errors prevented the article from being saved</h2>
@@ -23,3 +23,5 @@
     <%= f.submit %>
 </p>
 <% end %>
+
+<%= link_to 'Return to articles listing', articles_path %>
