@@ -1,6 +1,7 @@
 # frozen_string_literal: true
+
 class ArticlesController < ApplicationController
-before_action :set_article, only:[:show, :edit, :update, :destroy]
+  before_action :set_article, only: %i[show edit update destroy]
   def show
     # byebug
   end
@@ -13,8 +14,7 @@ before_action :set_article, only:[:show, :edit, :update, :destroy]
     @article = Article.new
   end
 
-  def edit
-  end
+  def edit; end
 
   def create
     # render plain: params[:article]
@@ -52,9 +52,4 @@ before_action :set_article, only:[:show, :edit, :update, :destroy]
   def article_params
     params.require(:article).permit(:title, :description)
   end
-  # private
-  # def candidate_params
-  #   params.require(:candidate).permit(:name, :age, :party, :politics)
-  # end
-  # @candidate = Candidate.new(candidate_params)
 end
