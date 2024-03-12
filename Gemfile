@@ -9,9 +9,9 @@ ruby '3.3.0'
 gem 'rails', '~> 6.1.7', '>= 6.1.7.1'
 
 # ANCHOR - change db
-# Use sqlite3 as the database for Active Record
-# gem 'sqlite3', '~> 1.4'
-gem 'pg'
+# Use pg as the database for Active Record
+# gem 'pg', '~> 1.4'
+gem 'pg', '~> 1.1'
 
 # Use Puma as the app server
 gem 'puma', '~> 5.0'
