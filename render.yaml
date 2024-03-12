@@ -1,5 +1,9 @@
 databases:
+<<<<<<< HEAD
   - name: blogger_pg
+=======
+  - name: blogger_rails6
+>>>>>>> f8af604 (git chore)
     databaseName: blogger_rails6
     user: nora
     plan: free
@@ -15,7 +19,11 @@ services:
     envVars:
       - key: DATABASE_URL
         fromDatabase:
+<<<<<<< HEAD
           name: blogger_pg
+=======
+          name: blogger_rails6
+>>>>>>> f8af604 (git chore)
           property: connectionString
       - key: RAILS_MASTER_KEY
         sync: false
