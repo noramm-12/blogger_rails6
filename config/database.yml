@@ -82,5 +82,5 @@ test:
 production:
   <<: *default
   database: blogger_rails6_production
-  username: blogger_rails6
+  username: nora
   password: <%= ENV['BLOGGER_RAILS6_DATABASE_PASSWORD'] %>
